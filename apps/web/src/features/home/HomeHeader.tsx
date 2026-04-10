@@ -2,8 +2,9 @@
 
 "use client";
 
-import { Globe, Moon, Settings } from "lucide-react";
+import { Globe, Settings } from "lucide-react";
 import { Button } from "@aiclassroom/ui";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 /** 右上角工具栏 — 语言 / 主题 / 设置图标按钮 */
 export function HomeHeader() {
@@ -17,14 +18,7 @@ export function HomeHeader() {
       >
         <Globe className="h-5 w-5" />
       </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        aria-label="Toggle theme"
-        className="text-muted-foreground hover:text-foreground"
-      >
-        <Moon className="h-5 w-5" />
-      </Button>
+      <ThemeToggle />
       <Button
         variant="ghost"
         size="icon"
