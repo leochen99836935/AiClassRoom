@@ -3,9 +3,31 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "lint": "echo skip",
-    "typecheck": "echo skip",
-    "test": "echo skip",
-    "build": "echo skip"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "echo skip"
+  },
+  "dependencies": {
+    "@aiclassroom/ui": "workspace:*",
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.12.0",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.15.0"
   }
 }
