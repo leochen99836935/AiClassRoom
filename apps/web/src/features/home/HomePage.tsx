@@ -4,10 +4,13 @@
 
 import { useCallback } from "react";
 import { GraduationCap } from "lucide-react";
+import { useT } from "@/lib/i18n";
 import { HomeHeader } from "./HomeHeader";
 import { ChatInput } from "./ChatInput";
 
 export function HomePage() {
+  const t = useT();
+
   const handleSubmit = useCallback((text: string) => {
     // Phase 1 后续任务会接入 lessonStore + 路由跳转到生成流程
     console.log("[HomePage] submit:", text);
@@ -30,7 +33,7 @@ export function HomePage() {
             </h1>
           </div>
           <p className="text-muted-foreground text-center text-sm tracking-wide md:text-base">
-            Generative Learning in Multi-Agent Interactive Classroom
+            {t("home.slogan")}
           </p>
         </div>
 
@@ -38,7 +41,7 @@ export function HomePage() {
         <ChatInput onSubmit={handleSubmit} />
 
         {/* Footer */}
-        <p className="text-muted-foreground/50 text-xs">AIClassRoom · Open Source Project</p>
+        <p className="text-muted-foreground/50 text-xs">{t("home.footer")}</p>
       </main>
     </div>
   );

@@ -13,6 +13,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { Button } from "@aiclassroom/ui";
+import { useT } from "@/lib/i18n";
 
 interface ChatInputProps {
   onSubmit: (text: string) => void;
@@ -20,6 +21,7 @@ interface ChatInputProps {
 
 /** 聊天式输入框区域 */
 export function ChatInput({ onSubmit }: ChatInputProps) {
+  const t = useT();
   const [value, setValue] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -68,10 +70,10 @@ export function ChatInput({ onSubmit }: ChatInputProps) {
           <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-full">
             <GraduationCap className="text-primary h-4 w-4" />
           </div>
-          <span className="text-foreground/80 text-sm font-medium">同学</span>
+          <span className="text-foreground/80 text-sm font-medium">{t("home.role")}</span>
         </div>
         <div className="flex items-center gap-1">
-          <span className="text-muted-foreground mr-1 text-xs">生成课程 ▸▸</span>
+          <span className="text-muted-foreground mr-1 text-xs">{t("home.generate")}</span>
           {/* Role avatar placeholders */}
           <div className="flex -space-x-1.5">
             {[1, 2, 3].map((i) => (
@@ -89,7 +91,7 @@ export function ChatInput({ onSubmit }: ChatInputProps) {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
           onInput={handleInput}
-          placeholder="输入你想学习的主题，例如：量子计算入门、新员工信息安全培训..."
+          placeholder={t("home.placeholder")}
           rows={2}
           className="placeholder:text-muted-foreground/60 text-foreground w-full resize-none bg-transparent text-sm leading-relaxed outline-none"
         />
@@ -107,7 +109,7 @@ export function ChatInput({ onSubmit }: ChatInputProps) {
         </div>
         <Button type="submit" size="sm" disabled={!hasContent} className="rounded-lg px-3">
           <SendHorizontal className="mr-1 h-4 w-4" />
-          发送
+          {t("home.send")}
         </Button>
       </div>
     </form>
