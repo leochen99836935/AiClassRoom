@@ -47,9 +47,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@aiclassroom/types':
+        specifier: workspace:^
+        version: link:../../packages/types
       '@aiclassroom/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      dexie:
+        specifier: ^4.4.2
+        version: 4.4.2
       immer:
         specifier: ^11.1.4
         version: 11.1.4
@@ -1575,6 +1581,9 @@ packages:
 
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
+
+  dexie@4.4.2:
+    resolution: {integrity: sha512-zMtV8q79EFE5U8FKZvt0Y/77PCU/Hr/RDxv1EDeo228L+m/HTbeN2AjoQm674rhQCX8n3ljK87lajt7UQuZfvw==}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -3730,6 +3739,8 @@ snapshots:
   detect-libc@2.1.2: {}
 
   detect-node-es@1.1.0: {}
+
+  dexie@4.4.2: {}
 
   eastasianwidth@0.2.0: {}
 
