@@ -9,5 +9,15 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "build": "echo skip"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.68",
+    "@ai-sdk/deepseek": "^2.0.29",
+    "@ai-sdk/google": "^3.0.61",
+    "@ai-sdk/openai": "^3.0.52",
+    "@ai-sdk/openai-compatible": "^2.0.41",
+    "@aiclassroom/types": "workspace:^",
+    "ai": "^6.0.156",
+    "zod": "^4.3.6"
   }
 }
